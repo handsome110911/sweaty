@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>流汗吧！病毒少女！</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="background"></div>
+  <div class="container">
+    <div class="control-panel">
+      <h2>項目管理</h2>
+      <div id="item-list"></div>
+      <button onclick="addItem()">➕ 新增項目</button>
+      <button onclick="resetItems()">♻️ 重設所有</button>
+      <button onclick="removeLastItem()">➖ 移除最後一項</button>
+    </div>
+    <div class="wheel-panel">
+      <h2>病毒少女轉盤</h2>
+      <canvas id="wheel" width="400" height="400"></canvas>
+      <div class="controls">
+        <button onclick="spin(1)">轉一次</button>
+        <button onclick="spin(10)">轉十次</button>
+        <input type="number" id="custom-times" min="1" max="9999" />
+        <button onclick="spinCustom()">自定義轉次數</button>
+      </div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
